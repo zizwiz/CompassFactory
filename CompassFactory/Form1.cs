@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using CenteredMessagebox;
 using CoordinateSharp;
 using CoordinateSharp.Magnetic;
 using Metar_Taf_Viewer.common_data;
@@ -25,6 +26,9 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+https://coordinatesharp.com/DeveloperGuide#magnetic-fields
+
 */
 
 
@@ -50,7 +54,8 @@ namespace CompassFactory
 
         private void btn_about_Click(object sender, EventArgs e)
         {
-
+            MsgBox.Show("Build with Jetbrains Rider\rhttps://www.jetbrains.com/rider/", "About", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
