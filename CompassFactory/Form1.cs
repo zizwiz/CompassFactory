@@ -46,7 +46,7 @@ namespace CompassFactory
         {
             Text += " : v" + Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
 
-            
+
 
             //Get the data file from resources and write to file in same dir as the app.
             if (File.Exists("airport_data.xml")) File.Delete("airport_data.xml");
@@ -65,10 +65,12 @@ namespace CompassFactory
 
             //set index to first item
             cmbobx_airportinfo_from.SelectedIndex = cmbobx_airportinfo_to.SelectedIndex = 0;
-            
+
             //if more than 34 items set to Cambridge item 33
-            if (cmbobx_airportinfo_from.Items.Count>33) cmbobx_airportinfo_from.SelectedIndex = 33;
-            
+            if (cmbobx_airportinfo_from.Items.Count > 33) cmbobx_airportinfo_from.SelectedIndex = 33;
+
+            // Hide and show items
+            cmbobx_airportinfo_to.Visible = false;
         }
 
         private void btn_about_Click(object sender, EventArgs e)
@@ -105,9 +107,9 @@ namespace CompassFactory
 
             rchtxtbx_charting_output.Text = "";
 
-            string[] data = airport_data.GetAirportInfo(AirfieldName);
-            double lat = double.Parse(data[4]);
-            double lng = double.Parse(data[6]);
+            string[] from_data = airport_data.GetAirportInfo(AirfieldName);
+            double from_lat = double.Parse(from_data[4]);
+            double from_lng = double.Parse(from_data[6]);
 
 
             int year = dateTimePicker1.Value.Year;
@@ -117,13 +119,29 @@ namespace CompassFactory
             int minute = DateTime.Now.Minute;
             int second = DateTime.Now.Second;
 
-            Coordinate c = new Coordinate(lat, lng, new DateTime(year, month, day, hour, minute, second));
-            Magnetic m = new Magnetic(c, DataModel.WMM2020);
+            Coordinate fc = new Coordinate(from_lat, from_lng, new DateTime(year, month, day, hour, minute, second));
+            Magnetic m = new Magnetic(fc, DataModel.WMM2020);
 
-           rchtxtbx_charting_output.AppendText("Declination: " + m.MagneticFieldElements.Declination + "\r");
-           rchtxtbx_charting_output.AppendText("Declination Uncertainty:" + m.Uncertainty.Declination + "\r");
+            rchtxtbx_charting_output.AppendText("Declination: \t" + Math.Round(m.MagneticFieldElements.Declination, 2) + "\r");
+            rchtxtbx_charting_output.AppendText("Declination Uncertainty: \t" + Math.Round(m.Uncertainty.Declination, 2) + "\r");
 
+            //Only show if we have chosen to fly between two airfields
+            if (chkbx_flight.Checked)
+            {
+                string[] to_data = airport_data.GetAirportInfo(cmbobx_airportinfo_to.Text);
+                double to_lat = double.Parse(to_data[4]);
+                double to_lng = double.Parse(to_data[6]);
 
+                Coordinate tc = new Coordinate(to_lat, to_lng, new DateTime(year, month, day, hour, minute, second));
+                Distance d = new Distance(fc, tc, Shape.Ellipsoid);
+
+                rchtxtbx_charting_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
+                rchtxtbx_charting_output.AppendText("\rFlying from " + cmbobx_airportinfo_from.Text + " to " +
+                                                    cmbobx_airportinfo_to.Text + "\r");
+
+                rchtxtbx_charting_output.AppendText("Distance = " + Math.Round(d.NauticalMiles, 2) + "nm\r");
+                rchtxtbx_charting_output.AppendText("Bearing = " + Math.Round(d.Bearing, 2) + "°\r");
+            }
         }
 
         private void Solar(string AirfieldName)
@@ -144,7 +162,7 @@ namespace CompassFactory
             int second = DateTime.Now.Second;
 
             Coordinate c = new Coordinate(lat, lng, new DateTime(year, month, day, hour, minute, second));
-            
+
 
             rchtxtbx_solar_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
             rchtxtbx_solar_output.AppendText("\rCelestial Information for " + cmbobx_airportinfo_to.Text + "\r");
@@ -200,6 +218,26 @@ namespace CompassFactory
 
             // rchtxtbx_output.AppendText("Universal Transverse Mercator values = " + c.UTM + "\r");
             // // 10T 550200mE 5272748mN
+        }
+
+        private void tbcntr_compass_factory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Flight();
+        }
+
+        private void chkbx_flight_CheckedChanged(object sender, EventArgs e)
+        {
+            Flight();
+        }
+
+        private void Flight()
+        {
+            cmbobx_airportinfo_to.Visible = false;
+
+            if ((tbcntr_compass_factory.SelectedTab.Name == "tab_charting")&&(chkbx_flight.Checked))
+            {
+                cmbobx_airportinfo_to.Visible = true;
+            }
         }
     }
 }
