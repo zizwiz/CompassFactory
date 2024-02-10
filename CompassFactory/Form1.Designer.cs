@@ -32,18 +32,56 @@ namespace CompassFactory
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_about = new System.Windows.Forms.Button();
-            this.rchtxtbx_output = new System.Windows.Forms.RichTextBox();
+            this.rchtxtbx_solar_output = new System.Windows.Forms.RichTextBox();
             this.btn_go = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbobx_airport_info = new System.Windows.Forms.ComboBox();
+            this.cmbobx_airportinfo_to = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tbcntr_compass_factory = new System.Windows.Forms.TabControl();
+            this.tab_solar = new System.Windows.Forms.TabPage();
+            this.tab_lunar = new System.Windows.Forms.TabPage();
+            this.tab_charting = new System.Windows.Forms.TabPage();
+            this.rchtxtbx_lunar_output = new System.Windows.Forms.RichTextBox();
+            this.rchtxtbx_charting_output = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.cmbobx_airportinfo_from = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tbcntr_compass_factory.SuspendLayout();
+            this.tab_solar.SuspendLayout();
+            this.tab_lunar.SuspendLayout();
+            this.tab_charting.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(801, 572);
+            this.btn_exit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_exit.Location = new System.Drawing.Point(1004, 3);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(137, 47);
+            this.btn_exit.Size = new System.Drawing.Size(218, 68);
             this.btn_exit.TabIndex = 0;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -51,27 +89,30 @@ namespace CompassFactory
             // 
             // btn_about
             // 
-            this.btn_about.Location = new System.Drawing.Point(12, 572);
+            this.btn_about.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_about.Location = new System.Drawing.Point(3, 3);
             this.btn_about.Name = "btn_about";
-            this.btn_about.Size = new System.Drawing.Size(60, 47);
+            this.btn_about.Size = new System.Drawing.Size(74, 68);
             this.btn_about.TabIndex = 1;
             this.btn_about.Text = "?";
             this.btn_about.UseVisualStyleBackColor = true;
             this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
-            // rchtxtbx_output
+            // rchtxtbx_solar_output
             // 
-            this.rchtxtbx_output.Location = new System.Drawing.Point(12, 46);
-            this.rchtxtbx_output.Name = "rchtxtbx_output";
-            this.rchtxtbx_output.Size = new System.Drawing.Size(926, 520);
-            this.rchtxtbx_output.TabIndex = 2;
-            this.rchtxtbx_output.Text = "";
+            this.rchtxtbx_solar_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_solar_output.Location = new System.Drawing.Point(3, 3);
+            this.rchtxtbx_solar_output.Name = "rchtxtbx_solar_output";
+            this.rchtxtbx_solar_output.Size = new System.Drawing.Size(1211, 446);
+            this.rchtxtbx_solar_output.TabIndex = 2;
+            this.rchtxtbx_solar_output.Text = "";
             // 
             // btn_go
             // 
-            this.btn_go.Location = new System.Drawing.Point(414, 572);
+            this.btn_go.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_go.Location = new System.Drawing.Point(546, 3);
             this.btn_go.Name = "btn_go";
-            this.btn_go.Size = new System.Drawing.Size(137, 47);
+            this.btn_go.Size = new System.Drawing.Size(218, 68);
             this.btn_go.TabIndex = 3;
             this.btn_go.Text = "Go";
             this.btn_go.UseVisualStyleBackColor = true;
@@ -80,297 +121,290 @@ namespace CompassFactory
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(563, 18);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Airport";
             // 
-            // cmbobx_airport_info
+            // cmbobx_airportinfo_to
             // 
-            this.cmbobx_airport_info.FormattingEnabled = true;
-            this.cmbobx_airport_info.Items.AddRange(new object[] {
-            " Choose Airport Below",
-            "AAC Middle Wallop",
-            "Aberdeen Airport",
-            "Aberporth Airport",
-            "Aintree Heliport",
-            "Alderney Airport",
-            "Andrewsfield Aerodrome",
-            "Anglesey Airport",
-            "Anwick",
-            "Ascot Racecourse Heliport",
-            "Ashcroft",
-            "Audley End Airfield",
-            "Bagby Airfield",
-            "Barra Airport",
-            "Barrow/Walney Island Airport",
-            "Beccles Airfield",
-            "Bedford Aerodrome",
-            "Belfast International Airport",
-            "Bembridge Airport",
-            "Benbecula Airport",
-            "Beverley/Linley Hill Airfield",
-            "Bicester Airfield",
-            "Birmingham Airport",
-            "Blackbushe Airport",
-            "Blackpool Airport",
-            "Bodmin Aerodrome",
-            "Bourn Airfield",
-            "Bournemouth Airport",
-            "Breighton Aerodrome",
-            "Brimpton",
-            "Bristol Airport",
-            "Brooklands",
-            "Bruntingthorpe Aerodrome",
-            "Caernarfon Airport",
-            "Cambridge City Airport",
-            "Campbeltown Airport ",
-            "Cardiff Airport",
-            "Cardiff Heliport",
-            "Carlisle Lake District Airport",
-            "Chalgrove Airfield",
-            "Challock Airfield",
-            "Cheltenham Racecourse Heliport",
-            "Chester Hawarden Airport",
-            "Chichester/Goodwood Airport",
-            "City of Derry Airport",
-            "Clacton Airport",
-            "Colerne",
-            "Coll Airport",
-            "Colonsay Airport",
-            "Compton Abbas Airfield",
-            "Cotswold Airport",
-            "Cottesmore",
-            "Coventry Airport",
-            "Cranfield Airport",
-            "Crosland Moor Airfield",
-            "Crowfield Airfield",
-            "Culter Heliport",
-            "Cumbernauld Airport",
-            "Damyns Hall Aerodrome",
-            "Deanland Lewes",
-            "Deenethorpe",
-            "Denham Aerodrome",
-            "Derby Airfield",
-            "Doncaster Sheffield Airport",
-            "Dundee Airport",
-            "Dunkeswell Aerodrome",
-            "Dunsfold Aerodrome",
-            "Duxford Aerodrome",
-            "Eaglescott Airfield",
-            "Earls Colne Airfield",
-            "East Midlands Airport",
-            "Eday Airport",
-            "Edinburgh Airport",
-            "Elmsett Airfield",
-            "Elstree Aerodrome",
-            "Elvington Airfield",
-            "Enniskillen",
-            "Enstone Airfield",
-            "Exeter Airport",
-            "Fair Isle Airport",
-            "Fairoaks Airport",
-            "Farnborough Airport",
-            "Farthing Corner",
-            "Fenland Airfield",
-            "Fife Airport",
-            "Filton",
-            "Fishburn Airfield",
-            "Fowlmere Airfield",
-            "Full Sutton Airfield",
-            "George Best Belfast City Airport",
-            "Glasgow Airport",
-            "Glasgow City Heliport",
-            "Glasgow Prestwick Airport",
-            "Gloucestershire Airport",
-            "Goodwood Racecourse Heliport",
-            "Great Yarmouth",
-            "Guernsey Airport",
-            "Haverfordwest Airport",
-            "Headcorn Aerodrome",
-            "Henstridge Airfield",
-            "Holyhead Heliport",
-            "Humberside Airport",
-            "Hunsdon",
-            "Inverness Airport",
-            "Islay Airport",
-            "Isle of Man Airport",
-            "Isle of Skye",
-            "Isle of Wight/Sandown Airport",
-            "Jersey Airport",
-            "Kinloss Barracks",
-            "Kirkwall Airport",
-            "Land\'s End Airport",
-            "Langford Lodge",
-            "Lasham Airfield",
-            "Leconfield",
-            "Lee on Solent",
-            "Leeds Bradford Airport",
-            "Leeds East Airport",
-            "Leicester Airport",
-            "Leuchars Station",
-            "Little Gransden Airfield",
-            "Liverpool John Lennon Airport",
-            "Llanbedr Airport",
-            "London Biggin Hill Airport",
-            "London City Airport",
-            "London Gatwick Airport",
-            "London Heathrow Airport",
-            "London Luton",
-            "London Oxford Airport",
-            "London Southend Airport",
-            "London Stansted Airport",
-            "London Westland Heliport",
-            "Long Marston",
-            "Longside",
-            "Lydd Airport",
-            "Main Hall Farm Airfield",
-            "Manchester Airport",
-            "Manchester Barton Aerodrome",
-            "Manston Airport",
-            "Marshland",
-            "Maypole",
-            "MoD Boscombe Down",
-            "Netheravon Airfield",
-            "Netherthorpe Airfield",
-            "Newcastle International Airport",
-            "Newmarket Heath",
-            "Newquay Airport / RAF St Mawgan",
-            "Newtownards Airport",
-            "North Ronaldsay Airport",
-            "North Weald Airfield",
-            "Norwich Airport",
-            "Nottingham Airport",
-            "Oaksey Park Airfield",
-            "Oban Airport",
-            "Old Buckenham Airfield",
-            "Old Sarum Airfield",
-            "Papa Westray Airport",
-            "Pembrey Airport",
-            "Penzance Heliport",
-            "Perranporth Airfield",
-            "Perth Airport",
-            "Peterborough Business Airport",
-            "Peterborough Sibson",
-            "Plymouth",
-            "Popham Airfield",
-            "Portland Heliport",
-            "RAF Barkston Heath",
-            "RAF Benson",
-            "RAF Brize Norton",
-            "RAF Coltishall",
-            "RAF Coningsby",
-            "RAF Cosford",
-            "RAF Cranwell",
-            "RAF Dishforth",
-            "RAF Fairford",
-            "RAF Halton",
-            "RAF Henlow",
-            "RAF Honington",
-            "RAF Lakenheath",
-            "RAF Leeming",
-            "RAF Linton-on-Ouse",
-            "RAF Lossiemouth",
-            "RAF Lyneham",
-            "RAF Marham",
-            "RAF Mildenhall",
-            "RAF Northolt",
-            "RAF Odiham",
-            "RAF Scampton",
-            "RAF Shawbury",
-            "RAF Ternhill",
-            "RAF Topcliffe",
-            "RAF Waddington",
-            "RAF Wittering",
-            "RAF Woodvale",
-            "RAF Wyton",
-            "Redhill Aerodrome",
-            "Retford Gamston Airport",
-            "RNAS Culdrose",
-            "RNAS Yeovilton",
-            "Rochester Airport",
-            "Royal Marines Base Chivenor",
-            "Sanday Airport",
-            "Sandtoft Airfield",
-            "Scatsta",
-            "Seething Airfield",
-            "Sherburn-in-Elmet Airfield",
-            "Shipdham Airfield",
-            "Shobdon Aerodrome",
-            "Shoreham Airport",
-            "Shotton Airfield/Peterlee Parachute Centre",
-            "Shuttleworth Aerodrome",
-            "Silverstone",
-            "Skegness",
-            "Sleap Airfield",
-            "Southampton Airport",
-            "St Athan",
-            "St Mary\'s Airport",
-            "Stapleford Aerodrome",
-            "Stornoway Airport",
-            "Stronsay Airport",
-            "Strubby Airfield",
-            "Sturgate Airfield",
-            "Sumburgh Airport",
-            "Swansea Airport",
-            "Sywell Aerodrome",
-            "Tatenhill Airfield",
-            "Teesside International Airport",
-            "Thruxton Aerodrome",
-            "Thurrock",
-            "Tilstock",
-            "Tingwall Airport",
-            "Tiree Airport",
-            "Tresco Heliport",
-            "Truro Aerodrome",
-            "Turweston Aerodrome",
-            "Unst Airport",
-            "Upavon",
-            "Warton Aerodrome",
-            "Wattisham Airfield",
-            "Wellesbourne Mountford Aerodrome",
-            "Welshpool Airport",
-            "West Freugh",
-            "Westray Airport",
-            "Whalsay Airstrip",
-            "White Waltham Airfield",
-            "Wick Airport",
-            "Wickenby Aerodrome",
-            "Wolverhampton Airport",
-            "Wycombe Air Park",
-            "Yeovil Aerodrome"});
-            this.cmbobx_airport_info.Location = new System.Drawing.Point(620, 12);
-            this.cmbobx_airport_info.Name = "cmbobx_airport_info";
-            this.cmbobx_airport_info.Size = new System.Drawing.Size(318, 28);
-            this.cmbobx_airport_info.Sorted = true;
-            this.cmbobx_airport_info.TabIndex = 6;
+            this.cmbobx_airportinfo_to.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbobx_airportinfo_to.FormattingEnabled = true;
+            this.cmbobx_airportinfo_to.Location = new System.Drawing.Point(0, 0);
+            this.cmbobx_airportinfo_to.Name = "cmbobx_airportinfo_to";
+            this.cmbobx_airportinfo_to.Size = new System.Drawing.Size(311, 28);
+            this.cmbobx_airportinfo_to.Sorted = true;
+            this.cmbobx_airportinfo_to.TabIndex = 6;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 10);
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(202, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(398, 26);
             this.dateTimePicker1.TabIndex = 8;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1231, 631);
+            this.tableLayoutPanel1.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1225, 54);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tbcntr_compass_factory);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1225, 485);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tableLayoutPanel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 554);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1225, 74);
+            this.panel3.TabIndex = 2;
+            // 
+            // tbcntr_compass_factory
+            // 
+            this.tbcntr_compass_factory.Controls.Add(this.tab_solar);
+            this.tbcntr_compass_factory.Controls.Add(this.tab_lunar);
+            this.tbcntr_compass_factory.Controls.Add(this.tab_charting);
+            this.tbcntr_compass_factory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcntr_compass_factory.Location = new System.Drawing.Point(0, 0);
+            this.tbcntr_compass_factory.Name = "tbcntr_compass_factory";
+            this.tbcntr_compass_factory.SelectedIndex = 0;
+            this.tbcntr_compass_factory.Size = new System.Drawing.Size(1225, 485);
+            this.tbcntr_compass_factory.TabIndex = 0;
+            // 
+            // tab_solar
+            // 
+            this.tab_solar.Controls.Add(this.rchtxtbx_solar_output);
+            this.tab_solar.Location = new System.Drawing.Point(4, 29);
+            this.tab_solar.Name = "tab_solar";
+            this.tab_solar.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_solar.Size = new System.Drawing.Size(1217, 452);
+            this.tab_solar.TabIndex = 0;
+            this.tab_solar.Text = "Solar";
+            this.tab_solar.UseVisualStyleBackColor = true;
+            // 
+            // tab_lunar
+            // 
+            this.tab_lunar.Controls.Add(this.rchtxtbx_lunar_output);
+            this.tab_lunar.Location = new System.Drawing.Point(4, 29);
+            this.tab_lunar.Name = "tab_lunar";
+            this.tab_lunar.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_lunar.Size = new System.Drawing.Size(1217, 452);
+            this.tab_lunar.TabIndex = 1;
+            this.tab_lunar.Text = "Lunar";
+            this.tab_lunar.UseVisualStyleBackColor = true;
+            // 
+            // tab_charting
+            // 
+            this.tab_charting.Controls.Add(this.rchtxtbx_charting_output);
+            this.tab_charting.Location = new System.Drawing.Point(4, 29);
+            this.tab_charting.Name = "tab_charting";
+            this.tab_charting.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_charting.Size = new System.Drawing.Size(1217, 452);
+            this.tab_charting.TabIndex = 2;
+            this.tab_charting.Text = "Charting";
+            this.tab_charting.UseVisualStyleBackColor = true;
+            // 
+            // rchtxtbx_lunar_output
+            // 
+            this.rchtxtbx_lunar_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_lunar_output.Location = new System.Drawing.Point(3, 3);
+            this.rchtxtbx_lunar_output.Name = "rchtxtbx_lunar_output";
+            this.rchtxtbx_lunar_output.Size = new System.Drawing.Size(1211, 446);
+            this.rchtxtbx_lunar_output.TabIndex = 3;
+            this.rchtxtbx_lunar_output.Text = "";
+            // 
+            // rchtxtbx_charting_output
+            // 
+            this.rchtxtbx_charting_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_charting_output.Location = new System.Drawing.Point(3, 3);
+            this.rchtxtbx_charting_output.Name = "rchtxtbx_charting_output";
+            this.rchtxtbx_charting_output.Size = new System.Drawing.Size(1211, 446);
+            this.rchtxtbx_charting_output.TabIndex = 3;
+            this.rchtxtbx_charting_output.Text = "";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 11;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_about, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_exit, 10, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_go, 6, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1225, 74);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.panel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel5, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel6, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1225, 54);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel9);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(398, 48);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.tableLayoutPanel4);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(821, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(401, 48);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.cmbobx_airportinfo_from);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(412, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(398, 48);
+            this.panel6.TabIndex = 2;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel4.Controls.Add(this.panel7, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(401, 48);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.cmbobx_airportinfo_to);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(87, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(311, 42);
+            this.panel7.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label1);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(73, 42);
+            this.panel8.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.dateTimePicker1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(398, 48);
+            this.panel9.TabIndex = 0;
+            // 
+            // cmbobx_airportinfo_from
+            // 
+            this.cmbobx_airportinfo_from.FormattingEnabled = true;
+            this.cmbobx_airportinfo_from.Location = new System.Drawing.Point(58, 6);
+            this.cmbobx_airportinfo_from.Name = "cmbobx_airportinfo_from";
+            this.cmbobx_airportinfo_from.Size = new System.Drawing.Size(216, 28);
+            this.cmbobx_airportinfo_from.Sorted = true;
+            this.cmbobx_airportinfo_from.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 631);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmbobx_airport_info);
-            this.Controls.Add(this.btn_go);
-            this.Controls.Add(this.rchtxtbx_output);
-            this.Controls.Add(this.btn_about);
-            this.Controls.Add(this.btn_exit);
+            this.ClientSize = new System.Drawing.Size(1231, 631);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Compass Factory";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tbcntr_compass_factory.ResumeLayout(false);
+            this.tab_solar.ResumeLayout(false);
+            this.tab_lunar.ResumeLayout(false);
+            this.tab_charting.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -378,11 +412,31 @@ namespace CompassFactory
 
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_about;
-        private System.Windows.Forms.RichTextBox rchtxtbx_output;
+        private System.Windows.Forms.RichTextBox rchtxtbx_solar_output;
         private System.Windows.Forms.Button btn_go;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbobx_airport_info;
+        private System.Windows.Forms.ComboBox cmbobx_airportinfo_to;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabControl tbcntr_compass_factory;
+        private System.Windows.Forms.TabPage tab_solar;
+        private System.Windows.Forms.TabPage tab_lunar;
+        private System.Windows.Forms.TabPage tab_charting;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.RichTextBox rchtxtbx_lunar_output;
+        private System.Windows.Forms.RichTextBox rchtxtbx_charting_output;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ComboBox cmbobx_airportinfo_from;
     }
 }
 
