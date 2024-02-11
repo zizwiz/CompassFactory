@@ -87,9 +87,16 @@ namespace CompassFactory
 
         private void btn_go_Click(object sender, EventArgs e)
         {
+            int year = dateTimePicker1.Value.Year;
+            int month = dateTimePicker1.Value.Month;
+            int day = dateTimePicker1.Value.Day;
+            int hour = DateTime.Now.Hour;
+            int minute = DateTime.Now.Minute;
+            int second = DateTime.Now.Second;
+
             if (tbcntr_compass_factory.SelectedTab.Name == "tab_solar")
             {
-                Solar(cmbobx_airportinfo_from.Text);
+                Solar(cmbobx_airportinfo_from.Text, year, month, day, hour, minute, second);
             }
             else if (tbcntr_compass_factory.SelectedTab.Name == "tab_lunar")
             {
@@ -97,12 +104,12 @@ namespace CompassFactory
             }
             else if (tbcntr_compass_factory.SelectedTab.Name == "tab_charting")
             {
-                Charting(cmbobx_airportinfo_from.Text);
+                Charting(cmbobx_airportinfo_from.Text, year, month, day, hour, minute, second);
             }
         }
 
 
-        private void Charting(string AirfieldName)
+        private void Charting(string AirfieldName, int year, int month, int day, int hour, int minute, int second)
         {
 
             rchtxtbx_charting_output.Text = "";
@@ -111,20 +118,37 @@ namespace CompassFactory
             double from_lat = double.Parse(from_data[4]);
             double from_lng = double.Parse(from_data[6]);
 
+            //Coordinate fc = new Coordinate(from_lat, from_lng, new DateTime(year, month, day, hour, minute, second), new EagerLoad(false));
+            //Magnetic m = new Magnetic(fc, DataModel.WMM2020);
 
-            int year = dateTimePicker1.Value.Year;
-            int month = dateTimePicker1.Value.Month;
-            int day = dateTimePicker1.Value.Day;
-            int hour = DateTime.Now.Hour;
-            int minute = DateTime.Now.Minute;
-            int second = DateTime.Now.Second;
+            //rchtxtbx_charting_output.AppendText("Declination: \t" + Math.Round(m.MagneticFieldElements.Declination, 2) + "\r");
+            //rchtxtbx_charting_output.AppendText("Variation: \t\t" + Math.Round(m.SecularVariations.Declination, 2) + "\r");
+            //rchtxtbx_charting_output.AppendText("Uncertainty: \t" + Math.Round(m.Uncertainty.Declination, 2) + "\r");
 
-            Coordinate fc = new Coordinate(from_lat, from_lng, new DateTime(year, month, day, hour, minute, second));
+            
+
+            Coordinate fc = new Coordinate(from_lat, from_lng, new DateTime(year, month, day, hour, minute, second), new EagerLoad(false));
+            
+
+            fc.FormatOptions.Format = CoordinateFormatType.Degree_Minutes_Seconds;
+            fc.FormatOptions.Display_Leading_Zeros = true;
+            fc.FormatOptions.Round = 3;
+
             Magnetic m = new Magnetic(fc, DataModel.WMM2020);
 
+            rchtxtbx_charting_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
+            rchtxtbx_charting_output.AppendText("\rDecimal Degrees for " + cmbobx_airportinfo_from.Text + "\r");
             rchtxtbx_charting_output.AppendText("Declination: \t" + Math.Round(m.MagneticFieldElements.Declination, 2) + "\r");
-            rchtxtbx_charting_output.AppendText("Declination Uncertainty: \t" + Math.Round(m.Uncertainty.Declination, 2) + "\r");
+            rchtxtbx_charting_output.AppendText("Variation: \t\t" + Math.Round(m.SecularVariations.Declination, 2) + "\r");
+            rchtxtbx_charting_output.AppendText("Uncertainty: \t" + Math.Round(m.Uncertainty.Declination, 2) + "\r");
 
+            rchtxtbx_charting_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
+            rchtxtbx_charting_output.AppendText("\rDegrees, minutes and seconds for " + cmbobx_airportinfo_from.Text + "\r");
+            rchtxtbx_charting_output.AppendText("Declination: \t" + DecimalToDegrees(m.MagneticFieldElements.Declination) + "\r");
+            rchtxtbx_charting_output.AppendText("Variation: \t\t" + DecimalToDegrees(m.SecularVariations.Declination) + "\r");
+            rchtxtbx_charting_output.AppendText("Uncertainty: \t" + DecimalToDegrees(m.Uncertainty.Declination) + "\r");
+
+            
             //Only show if we have chosen to fly between two airfields
             if (chkbx_flight.Checked)
             {
@@ -144,7 +168,7 @@ namespace CompassFactory
             }
         }
 
-        private void Solar(string AirfieldName)
+        private void Solar(string AirfieldName, int year, int month, int day, int hour, int minute, int second)
         {
 
             rchtxtbx_solar_output.Text = "";
@@ -153,21 +177,18 @@ namespace CompassFactory
             double lat = double.Parse(data[4]);
             double lng = double.Parse(data[6]);
 
-
-            int year = dateTimePicker1.Value.Year;
-            int month = dateTimePicker1.Value.Month;
-            int day = dateTimePicker1.Value.Day;
-            int hour = DateTime.Now.Hour;
-            int minute = DateTime.Now.Minute;
-            int second = DateTime.Now.Second;
-
             Coordinate c = new Coordinate(lat, lng, new DateTime(year, month, day, hour, minute, second));
-
-
+            
             rchtxtbx_solar_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
-            rchtxtbx_solar_output.AppendText("\rCelestial Information for " + cmbobx_airportinfo_to.Text + "\r");
+            rchtxtbx_solar_output.AppendText("\rSolar Information for " + cmbobx_airportinfo_from.Text + "\r");
 
             rchtxtbx_solar_output.AppendText("\rCoordinates = \t\t" + c + "\r");
+            //formatting coordinates
+            c.FormatOptions.Format = CoordinateFormatType.Decimal_Degree;
+            c.FormatOptions.Display_Leading_Zeros = true;
+            c.FormatOptions.Round = 3;
+            rchtxtbx_solar_output.AppendText("Latitude (decimal) = \t\t" + c.Latitude + "\r");
+            rchtxtbx_solar_output.AppendText("Longitude (decimal) = \t" + c.Longitude + "\r");
 
             //You can get sunrise for any day by just adding or subtracting days
             rchtxtbx_solar_output.AppendText("\rYesterdays Sunrise = \t" +
@@ -205,7 +226,8 @@ namespace CompassFactory
 
             //Write out all the Solar Eclipses for present century
             //Adjust year in DateTime below to get other centuries.
-            rchtxtbx_solar_output.AppendText("\r Eclipse Table for present Century");
+            rchtxtbx_solar_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
+            rchtxtbx_solar_output.AppendText("\rEclipse Table for present Century\r");
             List<SolarEclipseDetails> events =
                 Celestial.Get_Solar_Eclipse_Table(lat, lng, new DateTime(year, month, day, hour, minute, second));
 
@@ -238,6 +260,21 @@ namespace CompassFactory
             {
                 cmbobx_airportinfo_to.Visible = true;
             }
+        }
+
+        private string DecimalToDegrees(double decimal_degrees)
+        {
+            string direction = "W";
+            int sec = (int)Math.Round(decimal_degrees * 3600);
+            int deg = sec / 3600;
+            sec = Math.Abs(sec % 3600);
+            int min = sec / 60;
+            sec %= 60;
+
+            if (deg < 0) direction = "E";
+
+            return deg + "° " + min +"' " + sec + "\" " + direction;
+
         }
     }
 }
