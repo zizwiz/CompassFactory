@@ -67,25 +67,27 @@ namespace CompassFactory
             rchtxtbx_solar_output.AppendText("Tomorrows Sunset = \t" +
                                              Celestial.Get_Next_SunSet(lat, lng, DateTime.Now.AddDays(1)) + "\r");
 
-
             rchtxtbx_solar_output.AppendText("\rSolar Noon = \t" + c.CelestialInfo.SolarNoon + "\r");
-            rchtxtbx_solar_output.AppendText("Sun Altitude = \t" + c.CelestialInfo.SunAltitude + "\r");
-            rchtxtbx_solar_output.AppendText("Solar Azimuth = \t" + c.CelestialInfo.SunAzimuth + "\r");
+            rchtxtbx_solar_output.AppendText("Sun Altitude = \t" + Math.Round(c.CelestialInfo.SunAltitude, 2) + "° E of N\r");
+            rchtxtbx_solar_output.AppendText("Solar Azimuth = \t" + Math.Round(c.CelestialInfo.SunAzimuth, 2) + "° E of N\r");
 
 
 
-            rchtxtbx_solar_output.AppendText("\rIs it Daylight at the moment? = " + c.CelestialInfo.IsSunUp + "\r");
-            rchtxtbx_solar_output.AppendText("Sun Condition = " + c.CelestialInfo.SunCondition + "\r");
+            rchtxtbx_solar_output.AppendText("\rIs it Daylight at the moment? = \t" + c.CelestialInfo.IsSunUp + "\r");
+            rchtxtbx_solar_output.AppendText("Sun Condition = \t" + c.CelestialInfo.SunCondition + "\r");
 
             rchtxtbx_solar_output.AppendText(
-                "\rLast Solar Eclipse = " + c.CelestialInfo.SolarEclipse.LastEclipse + "\r");
-            rchtxtbx_solar_output.AppendText("Next Solar Eclipse = " + c.CelestialInfo.SolarEclipse.NextEclipse + "\r");
-            rchtxtbx_solar_output.AppendText("\rZodiac Sign = " + c.CelestialInfo.AstrologicalSigns.ZodiacSign + "\r");
-            rchtxtbx_solar_output.AppendText("\rSummer Solstice = " + c.CelestialInfo.Solstices.Summer + "\r");
-            rchtxtbx_solar_output.AppendText("Winter Solstice = " + c.CelestialInfo.Solstices.Winter + "\r");
-            rchtxtbx_solar_output.AppendText("\rAutumn Equinox = " + c.CelestialInfo.Equinoxes.Fall + "\r");
-            rchtxtbx_solar_output.AppendText("Spring Equinox = " + c.CelestialInfo.Equinoxes.Spring + "\r");
+                "\rLast Solar Eclipse = \t" + c.CelestialInfo.SolarEclipse.LastEclipse + "\r");
+            rchtxtbx_solar_output.AppendText("Next Solar Eclipse = \t" + c.CelestialInfo.SolarEclipse.NextEclipse + "\r");
+            rchtxtbx_solar_output.AppendText("\rZodiac Sign = \t" + c.CelestialInfo.AstrologicalSigns.ZodiacSign + "\r");
 
+            rchtxtbx_solar_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
+            rchtxtbx_solar_output.AppendText("\rEquinox and Solstice\r");
+            rchtxtbx_solar_output.AppendText("Winter Solstice = \t" + c.CelestialInfo.Solstices.Winter + "\r");
+            rchtxtbx_solar_output.AppendText("Spring Equinox = \t" + c.CelestialInfo.Equinoxes.Spring + "\r");
+            rchtxtbx_solar_output.AppendText("Summer Solstice = \t" + c.CelestialInfo.Solstices.Summer + "\r");
+            rchtxtbx_solar_output.AppendText("Autumn Equinox = \t" + c.CelestialInfo.Equinoxes.Fall + "\r");
+            
 
             //Write out all the Solar Eclipses for present century
             //Adjust year in DateTime below to get other centuries.

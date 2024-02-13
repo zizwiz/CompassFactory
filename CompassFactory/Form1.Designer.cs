@@ -34,7 +34,7 @@ namespace CompassFactory
             this.btn_about = new System.Windows.Forms.Button();
             this.rchtxtbx_solar_output = new System.Windows.Forms.RichTextBox();
             this.btn_go = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_to_airport = new System.Windows.Forms.Label();
             this.cmbobx_airportinfo_to = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,6 +59,10 @@ namespace CompassFactory
             this.cmbobx_airportinfo_from = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.chkbx_flight = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,6 +81,9 @@ namespace CompassFactory
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -121,15 +128,15 @@ namespace CompassFactory
             this.btn_go.UseVisualStyleBackColor = true;
             this.btn_go.Click += new System.EventHandler(this.btn_go_Click);
             // 
-            // label1
+            // lbl_to_airport
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "To Airport";
+            this.lbl_to_airport.AutoSize = true;
+            this.lbl_to_airport.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_to_airport.Location = new System.Drawing.Point(46, 0);
+            this.lbl_to_airport.Name = "lbl_to_airport";
+            this.lbl_to_airport.Size = new System.Drawing.Size(27, 20);
+            this.lbl_to_airport.TabIndex = 7;
+            this.lbl_to_airport.Text = "To";
             // 
             // cmbobx_airportinfo_to
             // 
@@ -322,7 +329,7 @@ namespace CompassFactory
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.cmbobx_airportinfo_from);
+            this.panel6.Controls.Add(this.tableLayoutPanel5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(412, 3);
             this.panel6.Name = "panel6";
@@ -356,7 +363,7 @@ namespace CompassFactory
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label1);
+            this.panel8.Controls.Add(this.lbl_to_airport);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
@@ -374,10 +381,11 @@ namespace CompassFactory
             // 
             // cmbobx_airportinfo_from
             // 
+            this.cmbobx_airportinfo_from.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbobx_airportinfo_from.FormattingEnabled = true;
-            this.cmbobx_airportinfo_from.Location = new System.Drawing.Point(58, 6);
+            this.cmbobx_airportinfo_from.Location = new System.Drawing.Point(0, 0);
             this.cmbobx_airportinfo_from.Name = "cmbobx_airportinfo_from";
-            this.cmbobx_airportinfo_from.Size = new System.Drawing.Size(216, 28);
+            this.cmbobx_airportinfo_from.Size = new System.Drawing.Size(309, 28);
             this.cmbobx_airportinfo_from.Sorted = true;
             this.cmbobx_airportinfo_from.TabIndex = 0;
             // 
@@ -400,6 +408,50 @@ namespace CompassFactory
             this.chkbx_flight.Text = "Flight";
             this.chkbx_flight.UseVisualStyleBackColor = true;
             this.chkbx_flight.CheckedChanged += new System.EventHandler(this.chkbx_flight_CheckedChanged);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel5.Controls.Add(this.panel11, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel12, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(398, 48);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.cmbobx_airportinfo_from);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(86, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(309, 42);
+            this.panel11.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label2);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(72, 42);
+            this.panel12.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Location = new System.Drawing.Point(26, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "From";
             // 
             // Form1
             // 
@@ -431,6 +483,10 @@ namespace CompassFactory
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,7 +497,7 @@ namespace CompassFactory
         private System.Windows.Forms.Button btn_about;
         private System.Windows.Forms.RichTextBox rchtxtbx_solar_output;
         private System.Windows.Forms.Button btn_go;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_to_airport;
         private System.Windows.Forms.ComboBox cmbobx_airportinfo_to;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -466,6 +522,10 @@ namespace CompassFactory
         private System.Windows.Forms.ComboBox cmbobx_airportinfo_from;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.CheckBox chkbx_flight;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label2;
     }
 }
 

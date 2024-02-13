@@ -68,13 +68,26 @@ namespace CompassFactory
             rchtxtbx_lunar_output.AppendText("Today's Moonset = \t\t" + c.CelestialInfo.MoonSet + "\r");
             rchtxtbx_lunar_output.AppendText("Tomorrows Moonset = \t" +
                                              Celestial.Get_Next_MoonSet(lat, lng, DateTime.Now.AddDays(1)) + "\r");
+            
+            rchtxtbx_lunar_output.AppendText("\rIs Moon visible = \t\t" + c.CelestialInfo.IsMoonUp + "\r");
+            rchtxtbx_lunar_output.AppendText("Lunar Phase name = \t" + c.CelestialInfo.MoonIllum.PhaseName + "\r");
+            rchtxtbx_lunar_output.AppendText("Lunar Phase = \t\t" + GetLunarPhaseName(Math.Round(c.CelestialInfo.MoonIllum.Phase, 2)) + "\r");
+            rchtxtbx_lunar_output.AppendText("Lunar Condition = \t\t" + c.CelestialInfo.MoonCondition + "\r");
+
+            
+
+            rchtxtbx_lunar_output.AppendText("\rLast lunar Eclipse = \t\t" + c.CelestialInfo.LunarEclipse.LastEclipse + "\r");
+            rchtxtbx_lunar_output.AppendText("Next lunar Eclipse = \t" + c.CelestialInfo.LunarEclipse.NextEclipse + "\r");
+
+            rchtxtbx_lunar_output.AppendText("\rZodiac Sign = \t\t" + c.CelestialInfo.AstrologicalSigns.ZodiacSign + "\r");
+            rchtxtbx_lunar_output.AppendText("EMoon Sign = \t\t" + c.CelestialInfo.AstrologicalSigns.EMoonSign + "\r");
+            rchtxtbx_lunar_output.AppendText("EMoon Name = \t\t" + c.CelestialInfo.AstrologicalSigns.EMoonName + "\r");
 
 
-
-            rchtxtbx_lunar_output.AppendText("\rLunar Altitude = \t" + Math.Round(c.CelestialInfo.MoonAltitude, 2) + "°\r");
-            rchtxtbx_lunar_output.AppendText("Lunar Azimuth = \t" + Math.Round(c.CelestialInfo.MoonAzimuth, 2) + "\r");
-            rchtxtbx_lunar_output.AppendText("Lunar Distance = \t" + Math.Round(c.CelestialInfo.MoonDistance.Kilometers, 2) + "km\r");
-            rchtxtbx_lunar_output.AppendText("Lunar Illumination = \t" + c.CelestialInfo.MoonIllum.PhaseName + "\r");
+            rchtxtbx_lunar_output.AppendText("\rLunar Altitude = \t\t" + Math.Round(c.CelestialInfo.MoonAltitude, 2) + "°\r");
+            rchtxtbx_lunar_output.AppendText("Lunar Azimuth = \t\t" + Math.Round(c.CelestialInfo.MoonAzimuth, 2) + "\r");
+            rchtxtbx_lunar_output.AppendText("Lunar Distance = \t\t" + Math.Round(c.CelestialInfo.MoonDistance.Kilometers, 2) + "km\r");
+            
 
             /////////////////////////////////////////////////////////////
             /// Closest and furthest from the earth
@@ -108,28 +121,56 @@ namespace CompassFactory
 
 
 
+            //Write out all the Lunar Eclipses for present century
+            //Adjust year in DateTime below to get other centuries.
+            rchtxtbx_lunar_output.SelectionFont = new Font("Ariel", 8, FontStyle.Underline);
+            rchtxtbx_lunar_output.AppendText("\rEclipse Table for present Century\r");
+            List<LunarEclipseDetails> events =
+                Celestial.Get_Lunar_Eclipse_Table(lat, lng, new DateTime(year, month, day, hour, minute, second));
+
+            for (int i = 0; i < events.Count; i++)
+            {
+                rchtxtbx_lunar_output.AppendText("\r" + events[i]);
+            }
 
 
 
 
 
 
-
-            /*
-             * 
-               
-               
-              
-             */
+        }
 
 
+        private string GetLunarPhaseName(double myPhaseValue)
+        {
+            switch (myPhaseValue)
+            {
+                case 0:
+                    return "New Moon";
+                case double expression when (myPhaseValue > 0 && myPhaseValue < 0.25):
+                    return "New Moon moving towards First Quarter";
+                case 0.25:
+                    return "First Quarter";
+                case double expression when (myPhaseValue > 0.25 && myPhaseValue < 0.5):
+                    return "First Quarter moving towards Full Moon";
+                case 0.5:
+                    return "Full Moon";
+                case double expression when (myPhaseValue > 0.5 && myPhaseValue < 0.75):
+                    return "Full Moon moving towards Third Quarter";
+                case 0.75:
+                    return "Third Quarter";
+                default:
+                    return "Third Quarter moving towards New Moon";
+            }
+
+
+           
 
 
 
 
 
-
-
+            
         }
     }
 }

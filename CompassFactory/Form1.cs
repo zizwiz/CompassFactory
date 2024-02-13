@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 using CenteredMessagebox;
-using CoordinateSharp;
-using CoordinateSharp.Magnetic;
-using Metar_Taf_Viewer.common_data;
 
 /*
 < WinForm implementation of CoordinateSharp to show magnetic declination, 
@@ -70,6 +65,7 @@ namespace CompassFactory
             if (cmbobx_airportinfo_from.Items.Count > 33) cmbobx_airportinfo_from.SelectedIndex = 33;
 
             // Hide and show items
+            lbl_to_airport.Visible = false;
             cmbobx_airportinfo_to.Visible = false;
         }
 
@@ -125,9 +121,11 @@ namespace CompassFactory
         private void Flight()
         {
             cmbobx_airportinfo_to.Visible = false;
+            lbl_to_airport.Visible = false;
 
             if ((tbcntr_compass_factory.SelectedTab.Name == "tab_charting")&&(chkbx_flight.Checked))
             {
+                lbl_to_airport.Visible = true;
                 cmbobx_airportinfo_to.Visible = true;
             }
         }
