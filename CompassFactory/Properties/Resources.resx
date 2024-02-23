@@ -121,4 +121,10 @@
   <data name="airport_data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\common_data\airport_data.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="CoordinateSharp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\common_data\coordinatesharp.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CoordinateSharp_Magnetic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\common_data\coordinatesharp.magnetic.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

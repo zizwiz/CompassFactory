@@ -104,6 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="common_data\airport_data.xml" />
+    <Content Include="common_data\CoordinateSharp.dll" />
+    <Content Include="common_data\CoordinateSharp.Magnetic.dll" />
     <Content Include="compass.ico" />
   </ItemGroup>
   <ItemGroup />

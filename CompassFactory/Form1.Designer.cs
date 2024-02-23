@@ -39,51 +39,51 @@ namespace CompassFactory
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tbcntr_compass_factory = new System.Windows.Forms.TabControl();
-            this.tab_solar = new System.Windows.Forms.TabPage();
-            this.tab_lunar = new System.Windows.Forms.TabPage();
-            this.tab_charting = new System.Windows.Forms.TabPage();
-            this.rchtxtbx_lunar_output = new System.Windows.Forms.RichTextBox();
-            this.rchtxtbx_charting_output = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.cmbobx_airportinfo_from = new System.Windows.Forms.ComboBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.chkbx_flight = new System.Windows.Forms.CheckBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.cmbobx_airportinfo_from = new System.Windows.Forms.ComboBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tbcntr_compass_factory = new System.Windows.Forms.TabControl();
+            this.tab_solar = new System.Windows.Forms.TabPage();
+            this.tab_lunar = new System.Windows.Forms.TabPage();
+            this.rchtxtbx_lunar_output = new System.Windows.Forms.RichTextBox();
+            this.tab_charting = new System.Windows.Forms.TabPage();
+            this.rchtxtbx_charting_output = new System.Windows.Forms.RichTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.chkbx_flight = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.tbcntr_compass_factory.SuspendLayout();
             this.tab_solar.SuspendLayout();
             this.tab_lunar.SuspendLayout();
             this.tab_charting.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -132,7 +132,7 @@ namespace CompassFactory
             // 
             this.lbl_to_airport.AutoSize = true;
             this.lbl_to_airport.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_to_airport.Location = new System.Drawing.Point(46, 0);
+            this.lbl_to_airport.Location = new System.Drawing.Point(45, 0);
             this.lbl_to_airport.Name = "lbl_to_airport";
             this.lbl_to_airport.Size = new System.Drawing.Size(27, 20);
             this.lbl_to_airport.TabIndex = 7;
@@ -144,7 +144,7 @@ namespace CompassFactory
             this.cmbobx_airportinfo_to.FormattingEnabled = true;
             this.cmbobx_airportinfo_to.Location = new System.Drawing.Point(0, 0);
             this.cmbobx_airportinfo_to.Name = "cmbobx_airportinfo_to";
-            this.cmbobx_airportinfo_to.Size = new System.Drawing.Size(311, 28);
+            this.cmbobx_airportinfo_to.Size = new System.Drawing.Size(310, 28);
             this.cmbobx_airportinfo_to.Sorted = true;
             this.cmbobx_airportinfo_to.TabIndex = 6;
             // 
@@ -153,7 +153,7 @@ namespace CompassFactory
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(398, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(399, 26);
             this.dateTimePicker1.TabIndex = 8;
             // 
             // tableLayoutPanel1
@@ -182,6 +182,149 @@ namespace CompassFactory
             this.panel1.Size = new System.Drawing.Size(1225, 54);
             this.panel1.TabIndex = 0;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.panel4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel5, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel6, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1225, 54);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel9);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(399, 48);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.dateTimePicker1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(399, 48);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.tableLayoutPanel4);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(823, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(399, 48);
+            this.panel5.TabIndex = 1;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel4.Controls.Add(this.panel7, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(399, 48);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.cmbobx_airportinfo_to);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(86, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(310, 42);
+            this.panel7.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.lbl_to_airport);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(72, 42);
+            this.panel8.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tableLayoutPanel5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(413, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(399, 48);
+            this.panel6.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel5.Controls.Add(this.panel11, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel12, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(399, 48);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.cmbobx_airportinfo_from);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(86, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(310, 42);
+            this.panel11.TabIndex = 0;
+            // 
+            // cmbobx_airportinfo_from
+            // 
+            this.cmbobx_airportinfo_from.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbobx_airportinfo_from.FormattingEnabled = true;
+            this.cmbobx_airportinfo_from.Location = new System.Drawing.Point(0, 0);
+            this.cmbobx_airportinfo_from.Name = "cmbobx_airportinfo_from";
+            this.cmbobx_airportinfo_from.Size = new System.Drawing.Size(310, 28);
+            this.cmbobx_airportinfo_from.Sorted = true;
+            this.cmbobx_airportinfo_from.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label2);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(3, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(72, 42);
+            this.panel12.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Location = new System.Drawing.Point(26, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "From";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.tbcntr_compass_factory);
@@ -190,15 +333,6 @@ namespace CompassFactory
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1225, 485);
             this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 554);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1225, 74);
-            this.panel3.TabIndex = 2;
             // 
             // tbcntr_compass_factory
             // 
@@ -235,6 +369,15 @@ namespace CompassFactory
             this.tab_lunar.Text = "Lunar";
             this.tab_lunar.UseVisualStyleBackColor = true;
             // 
+            // rchtxtbx_lunar_output
+            // 
+            this.rchtxtbx_lunar_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxtbx_lunar_output.Location = new System.Drawing.Point(3, 3);
+            this.rchtxtbx_lunar_output.Name = "rchtxtbx_lunar_output";
+            this.rchtxtbx_lunar_output.Size = new System.Drawing.Size(1211, 446);
+            this.rchtxtbx_lunar_output.TabIndex = 3;
+            this.rchtxtbx_lunar_output.Text = "";
+            // 
             // tab_charting
             // 
             this.tab_charting.Controls.Add(this.rchtxtbx_charting_output);
@@ -246,15 +389,6 @@ namespace CompassFactory
             this.tab_charting.Text = "Charting";
             this.tab_charting.UseVisualStyleBackColor = true;
             // 
-            // rchtxtbx_lunar_output
-            // 
-            this.rchtxtbx_lunar_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxtbx_lunar_output.Location = new System.Drawing.Point(3, 3);
-            this.rchtxtbx_lunar_output.Name = "rchtxtbx_lunar_output";
-            this.rchtxtbx_lunar_output.Size = new System.Drawing.Size(1211, 446);
-            this.rchtxtbx_lunar_output.TabIndex = 3;
-            this.rchtxtbx_lunar_output.Text = "";
-            // 
             // rchtxtbx_charting_output
             // 
             this.rchtxtbx_charting_output.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -263,6 +397,15 @@ namespace CompassFactory
             this.rchtxtbx_charting_output.Size = new System.Drawing.Size(1211, 446);
             this.rchtxtbx_charting_output.TabIndex = 3;
             this.rchtxtbx_charting_output.Text = "";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tableLayoutPanel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 554);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1225, 74);
+            this.panel3.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
@@ -290,105 +433,6 @@ namespace CompassFactory
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1225, 74);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.panel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel5, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel6, 2, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1225, 54);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(398, 48);
-            this.panel4.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.tableLayoutPanel4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(821, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(401, 48);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.tableLayoutPanel5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(412, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(398, 48);
-            this.panel6.TabIndex = 2;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel4.Controls.Add(this.panel7, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.panel8, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(401, 48);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.cmbobx_airportinfo_to);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(87, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(311, 42);
-            this.panel7.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.lbl_to_airport);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(73, 42);
-            this.panel8.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.dateTimePicker1);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(398, 48);
-            this.panel9.TabIndex = 0;
-            // 
-            // cmbobx_airportinfo_from
-            // 
-            this.cmbobx_airportinfo_from.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbobx_airportinfo_from.FormattingEnabled = true;
-            this.cmbobx_airportinfo_from.Location = new System.Drawing.Point(0, 0);
-            this.cmbobx_airportinfo_from.Name = "cmbobx_airportinfo_from";
-            this.cmbobx_airportinfo_from.Size = new System.Drawing.Size(309, 28);
-            this.cmbobx_airportinfo_from.Sorted = true;
-            this.cmbobx_airportinfo_from.TabIndex = 0;
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.chkbx_flight);
@@ -409,50 +453,6 @@ namespace CompassFactory
             this.chkbx_flight.UseVisualStyleBackColor = true;
             this.chkbx_flight.CheckedChanged += new System.EventHandler(this.chkbx_flight_CheckedChanged);
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel5.Controls.Add(this.panel11, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel12, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(398, 48);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.cmbobx_airportinfo_from);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(86, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(309, 42);
-            this.panel11.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label2);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(72, 42);
-            this.panel12.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Location = new System.Drawing.Point(26, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "From";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -465,28 +465,28 @@ namespace CompassFactory
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.tbcntr_compass_factory.ResumeLayout(false);
-            this.tab_solar.ResumeLayout(false);
-            this.tab_lunar.ResumeLayout(false);
-            this.tab_charting.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.tbcntr_compass_factory.ResumeLayout(false);
+            this.tab_solar.ResumeLayout(false);
+            this.tab_lunar.ResumeLayout(false);
+            this.tab_charting.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

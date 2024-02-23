@@ -82,5 +82,25 @@ namespace CompassFactory.Properties {
                 return ResourceManager.GetString("airport_data", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] CoordinateSharp {
+            get {
+                object obj = ResourceManager.GetObject("CoordinateSharp", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] CoordinateSharp_Magnetic {
+            get {
+                object obj = ResourceManager.GetObject("CoordinateSharp_Magnetic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

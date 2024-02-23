@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 using CenteredMessagebox;
+using CompassFactory.Properties;
 
 /*
 < WinForm implementation of CoordinateSharp to show magnetic declination, 
@@ -46,6 +47,13 @@ namespace CompassFactory
             //Get the data file from resources and write to file in same dir as the app.
             if (File.Exists("airport_data.xml")) File.Delete("airport_data.xml");
             File.WriteAllText("airport_data.xml", Properties.Resources.airport_data);
+
+            if (File.Exists("CoordinateSharp.Magnetic.dll")) File.Delete("CoordinateSharp.Magnetic.dll");
+            File.WriteAllBytes("CoordinateSharp.Magnetic.dll", Resources.CoordinateSharp_Magnetic);
+
+            if (File.Exists("CoordinateSharp.dll")) File.Delete("CoordinateSharp.dll");
+            File.WriteAllBytes("CoordinateSharp.dll", Resources.CoordinateSharp);
+
 
             //populate the combo boxes with the airfield names direct from xml file so we get 
             //names correctly spelt for later look up
